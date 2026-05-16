@@ -2,3 +2,9 @@
   base = "lovable-project-80568a74"
   command = "npm install && npm run build"
   publish = "dist"
+
+[[redirects]]
+  from = "/*"
+  to = "/.netlify/functions/server"
+  status = 200
+  force = true
