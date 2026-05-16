@@ -1,7 +1,7 @@
 [build]
   base = "lovable-project-80568a74"
   command = "npm run build"
-  publish = "dist"
+  publish = "dist/client"
 
 [[redirects]]
   from = "/*"
