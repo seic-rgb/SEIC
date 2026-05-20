@@ -20,9 +20,9 @@
                 extend: {
                     colors: {
                         construccion: {
-                            dark: '#0a192f', /* Azul Marino Profundo Corporativo */
-                            accent: '#1e40af', /* Azul Eléctrico */
-                            orange: '#f97316' /* Naranja de acento */
+                            dark: '#0a192f',
+                            accent: '#1e40af',
+                            orange: '#f97316'
                         }
                     }
                 }
@@ -30,17 +30,30 @@
         }
     </script>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <style>
-        .hide-scroll-bar {
-            -ms-overflow-style: none;  /* IE y Edge */
-            scrollbar-width: none;  /* Firefox */
+        .swiper {
+            width: 100%;
+            padding-top: 30px;
+            padding-bottom: 50px;
         }
-        .hide-scroll-bar::-webkit-scrollbar {
-            display: none; /* Chrome, Safari y Opera */
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+            width: 320px; /* Ancho en móviles */
+        }
+        @media (min-width: 768px) {
+            .swiper-slide {
+                width: 400px; /* Ancho en PC */
+            }
+        }
+        .swiper-pagination-bullet-active {
+            background-color: #f97316 !important; /* Color naranja corporativo */
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans relative">
+<body class="bg-slate-50 text-slate-800 font-sans relative overflow-x-hidden">
 
     <nav class="sticky top-0 z-40 bg-white text-slate-900 shadow-md">
         <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
@@ -172,87 +185,90 @@
 
     <section id="proyectos" class="py-20 bg-slate-100 overflow-hidden">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-12">
+            <div class="text-center mb-6">
                 <span class="text-xs font-bold text-construccion-orange uppercase tracking-wider block mb-2">Experiencia que transforma el entorno</span>
                 <h2 class="text-3xl md:text-4xl font-bold text-construccion-dark mb-4">Proyectos Estratégicos Ejecutados</h2>
                 <p class="text-slate-600 max-w-2xl mx-auto mt-2 text-sm md:text-base">Deslice para explorar muestras reales de nuestro portafolio de obras en Honduras, garantizadas bajo estrictas normativas institucionales:</p>
                 <div class="w-20 h-1 bg-construccion-accent mx-auto mt-4"></div>
             </div>
             
-            <div id="carrusel-proyectos" class="flex overflow-x-auto snap-x snap-mandatory gap-6 pb-8 pt-4 hide-scroll-bar mb-12 px-2 md:px-4 cursor-grab active:cursor-grabbing select-none">
-                
-                <div class="bg-white rounded-xl shadow-md overflow-hidden group min-w-[75%] sm:min-w-[42%] lg:min-w-[28%] snap-start shrink-0 flex flex-col hover:shadow-xl transition duration-300">
-                    <div class="overflow-hidden h-48 sm:h-56 bg-slate-200 pointer-events-none">
-                        <img src="proyecto-inprema-sps.jpg" alt="INJUMPEPM SPS" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+            <div class="swiper mySwiper mb-12">
+                <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border border-slate-200">
+                        <div class="overflow-hidden h-48 sm:h-56 bg-slate-200">
+                            <img src="proyecto-inprema-sps.jpg" alt="INJUMPEPM SPS" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 flex-grow text-left">
+                            <span class="text-[10px] font-bold text-construccion-orange uppercase tracking-wider">⚡ Infraestructura Energética</span>
+                            <h3 class="text-lg font-bold text-construccion-dark mt-1">Renovación de Techos INPREMA</h3>
+                            <p class="text-xs text-slate-500 mt-1 font-medium">Ubicación: Oficina San Pedro Sula</p>
+                            <p class="text-sm text-slate-600 mt-3">Obras de desmontaje, acondicionamiento y sustitución de cubiertas de techo con altos estándares de seguridad ocupacional.</p>
+                        </div>
                     </div>
-                    <div class="p-5 flex-grow">
-                        <span class="text-xs font-bold text-construccion-orange uppercase tracking-wider">⚡ Infraestructura Energética</span>
-                        <h3 class="text-lg font-bold text-construccion-dark mt-1">Renovación de Techos INPREMA</h3>
-                        <p class="text-xs text-slate-500 mt-1 font-medium">Ubicación: Oficina San Pedro Sula (INJUMPEPM)</p>
-                        <p class="text-sm text-slate-600 mt-2">Obras de desmontaje, acondicionamiento y sustitución de cubiertas de techo con altos estándares de seguridad ocupacional y estructural.</p>
-                    </div>
-                </div>
 
-                <div class="bg-white rounded-xl shadow-md overflow-hidden group min-w-[75%] sm:min-w-[42%] lg:min-w-[28%] snap-start shrink-0 flex flex-col hover:shadow-xl transition duration-300">
-                    <div class="overflow-hidden h-48 sm:h-56 bg-slate-200 pointer-events-none">
-                        <img src="proyecto-soto-cano.jpg" alt="Soto Cano Warehouse" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <div class="swiper-slide bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border border-slate-200">
+                        <div class="overflow-hidden h-48 sm:h-56 bg-slate-200">
+                            <img src="proyecto-soto-cano.jpg" alt="Soto Cano Warehouse" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 flex-grow text-left">
+                            <span class="text-[10px] font-bold text-blue-600 uppercase tracking-wider bg-blue-50 px-2 py-0.5 rounded border border-blue-200 inline-block">🏭 Desarrollo Industrial</span>
+                            <h3 class="text-lg font-bold text-construccion-dark mt-2">Installation Warehouse - Soto Cano</h3>
+                            <p class="text-xs text-slate-500 mt-1 font-medium">Cliente: ETERNA S.A. de C.V.</p>
+                            <p class="text-sm text-slate-600 mt-3">Supervisión integral de la ingeniería de diseño y control constructivo de naves industriales de gran escala.</p>
+                        </div>
                     </div>
-                    <div class="p-5 flex-grow">
-                        <span class="text-xs font-bold text-blue-600 uppercase tracking-wider bg-blue-50 px-2 py-0.5 rounded border border-blue-200 inline-block">🏭 Desarrollo Industrial</span>
-                        <h3 class="text-lg font-bold text-construccion-dark mt-1.5">Installation Warehouse - Soto Cano</h3>
-                        <p class="text-xs text-slate-500 mt-1 font-medium">Cliente: ETERNA S.A. de C.V. | Dueño: USACE</p>
-                        <p class="text-sm text-slate-600 mt-2">Supervisión integral de la ingeniería de diseño y control constructivo de naves industriales de gran escala, garantizando alta resistencia.</p>
-                    </div>
-                </div>
 
-                <div class="bg-white rounded-xl shadow-md overflow-hidden group min-w-[75%] sm:min-w-[42%] lg:min-w-[28%] snap-start shrink-0 flex flex-col hover:shadow-xl transition duration-300">
-                    <div class="overflow-hidden h-48 sm:h-56 bg-slate-200 pointer-events-none">
-                        <img src="proyecto-tanque-umasg-1.jpg" alt="Tanque Elevado UMAGS 1" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <div class="swiper-slide bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border border-slate-200">
+                        <div class="overflow-hidden h-48 sm:h-56 bg-slate-200">
+                            <img src="proyecto-tanque-umasg-1.jpg" alt="Tanque Elevado UMAGS 1" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 flex-grow text-left">
+                            <span class="text-[10px] font-bold text-construccion-orange uppercase tracking-wider">💧 Infraestructura WASH</span>
+                            <h3 class="text-lg font-bold text-construccion-dark mt-1">Tanque Elevado UMAGS 1 (15k Gls)</h3>
+                            <p class="text-xs text-slate-500 mt-1 font-medium">Donante: Visión Mundial Honduras</p>
+                            <p class="text-sm text-slate-600 mt-3">Ejecución técnica de cimentación profunda y montaje de estructura para tanque elevado para redes de agua comunitaria.</p>
+                        </div>
                     </div>
-                    <div class="p-5 flex-grow">
-                        <span class="text-xs font-bold text-construccion-orange uppercase tracking-wider">💧 Infraestructura WASH</span>
-                        <h3 class="text-lg font-bold text-construccion-dark mt-1">Tanque Elevado UMAGS 1 (15k Gls)</h3>
-                        <p class="text-xs text-slate-500 mt-1 font-medium">Donante: Visión Mundial Honduras</p>
-                        <p class="text-sm text-slate-600 mt-2">Ejecución técnica de cimentación profunda y montaje de estructura para tanque elevado para redes WASH de agua comunitaria.</p>
-                    </div>
-                </div>
 
-                <div class="bg-white rounded-xl shadow-md overflow-hidden group min-w-[75%] sm:min-w-[42%] lg:min-w-[28%] snap-start shrink-0 flex flex-col hover:shadow-xl transition duration-300">
-                    <div class="overflow-hidden h-48 sm:h-56 bg-slate-200 pointer-events-none">
-                        <img src="proyecto-tanque-umasg-2.jpg" alt="Tanque de Concreto UMAGS 2" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <div class="swiper-slide bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border border-slate-200">
+                        <div class="overflow-hidden h-48 sm:h-56 bg-slate-200">
+                            <img src="proyecto-tanque-umasg-2.jpg" alt="Tanque de Concreto UMAGS 2" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 flex-grow text-left">
+                            <span class="text-[10px] font-bold text-construccion-orange uppercase tracking-wider">💧 Infraestructura WASH</span>
+                            <h3 class="text-lg font-bold text-construccion-dark mt-1">Tanque de Concreto UMAGS 2</h3>
+                            <p class="text-xs text-slate-500 mt-1 font-medium">Capacidad: 65,000 Gls</p>
+                            <p class="text-sm text-slate-600 mt-3">Construcción integral de tanque de almacenamiento de hormigón armado con aditivos impermeabilizantes especiales.</p>
+                        </div>
                     </div>
-                    <div class="p-5 flex-grow">
-                        <span class="text-xs font-bold text-construccion-orange uppercase tracking-wider">💧 Infraestructura WASH</span>
-                        <h3 class="text-lg font-bold text-construccion-dark mt-1">Tanque de Concreto UMAGS 2</h3>
-                        <p class="text-xs text-slate-500 mt-1 font-medium">Capacidad: 65,000 Gls | Donante: Visión Mundial</p>
-                        <p class="text-sm text-slate-600 mt-2">Construcción integral de tanque de almacenamiento de hormigón armado de 65,000 galones, con aditivos impermeabilizantes especiales.</p>
-                    </div>
-                </div>
 
-                <div class="bg-white rounded-xl shadow-md overflow-hidden group min-w-[75%] sm:min-w-[42%] lg:min-w-[28%] snap-start shrink-0 flex flex-col hover:shadow-xl transition duration-300">
-                    <div class="overflow-hidden h-48 sm:h-56 bg-slate-200 pointer-events-none">
-                        <img src="proyecto-cruce-rio.jpg" alt="Cruce Aéreo Puente Colgante" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <div class="swiper-slide bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border border-slate-200">
+                        <div class="overflow-hidden h-48 sm:h-56 bg-slate-200">
+                            <img src="proyecto-cruce-rio.jpg" alt="Cruce Aéreo Puente Colgante" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 flex-grow text-left">
+                            <span class="text-[10px] font-bold text-construccion-orange uppercase tracking-wider">💧 Infraestructura WASH</span>
+                            <h3 class="text-lg font-bold text-construccion-dark mt-1">Cruce Aéreo Puente Colgante</h3>
+                            <p class="text-xs text-slate-500 mt-1 font-medium">Para Tubería de 4"</p>
+                            <p class="text-sm text-slate-600 mt-3">Cálculo estructural e instalación de puente colgante de alta ingeniería para el paso aéreo seguro de líneas de distribución.</p>
+                        </div>
                     </div>
-                    <div class="p-5 flex-grow">
-                        <span class="text-xs font-bold text-construccion-orange uppercase tracking-wider">💧 Infraestructura WASH</span>
-                        <h3 class="text-lg font-bold text-construccion-dark mt-1">Cruce Aéreo Tipo Puente Colgante</h3>
-                        <p class="text-xs text-slate-500 mt-1 font-medium">Para Tubería de 4" | Donante: Visión Mundial</p>
-                        <p class="text-sm text-slate-600 mt-2">Cálculo estructural e instalación de puente colgante de alta ingeniería para el paso aéreo seguro de líneas de distribución hidráulica.</p>
-                    </div>
-                </div>
 
-                <div class="bg-white rounded-xl shadow-md overflow-hidden group min-w-[75%] sm:min-w-[42%] lg:min-w-[28%] snap-start shrink-0 flex flex-col hover:shadow-xl transition duration-300">
-                    <div class="overflow-hidden h-48 sm:h-56 bg-slate-200 pointer-events-none">
-                        <img src="proyecto-solaris-diprova.jpg" alt="Planta Solar Diprova" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                    <div class="swiper-slide bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border border-slate-200">
+                        <div class="overflow-hidden h-48 sm:h-56 bg-slate-200">
+                            <img src="proyecto-solaris-diprova.jpg" alt="Planta Solar Diprova" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-6 flex-grow text-left">
+                            <span class="text-[10px] font-bold text-construccion-orange uppercase tracking-wider">⚡ Comercial Energético</span>
+                            <h3 class="text-lg font-bold text-construccion-dark mt-1">Parqueo con Paneles Solares</h3>
+                            <p class="text-xs text-slate-500 mt-1 font-medium">Cliente: SOLARIS</p>
+                            <p class="text-sm text-slate-600 mt-3">Diseño estructural y ejecución de vaciado de concreto para las bases y soportes de la planta de energía solar comercial.</p>
+                        </div>
                     </div>
-                    <div class="p-5 flex-grow">
-                        <span class="text-xs font-bold text-construccion-orange uppercase tracking-wider">⚡ Comercial Energético</span>
-                        <h3 class="text-lg font-bold text-construccion-dark mt-1">Estacionamiento Paneles Solares</h3>
-                        <p class="text-xs text-slate-500 mt-1 font-medium">Capacidad: 187.53 kWp | Cliente: SOLARIS</p>
-                        <p class="text-sm text-slate-600 mt-2">Diseño estructural y ejecución de vaciado de concreto para las bases y soportes de la planta de energía solar fotovoltaica comercial.</p>
-                    </div>
-                </div>
 
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
 
             <div class="max-w-4xl mx-auto bg-slate-900 rounded-2xl p-6 md:p-8 shadow-xl text-white text-center border border-slate-800">
@@ -315,7 +331,7 @@
                     </div>
                     <div class="rounded-lg overflow-hidden h-64 border border-slate-700 bg-slate-950">
                         <iframe 
-                            src="https://maps.google.com/maps?q=14.617892,-87.865475&z=16&output=embed" 
+                            src="https://maps.google.com/maps?q=14.617892,-87.865475&hl=es&z=16&output=embed" 
                             class="w-full h-full border-0" 
                             allowfullscreen="" 
                             loading="lazy"
@@ -363,35 +379,29 @@
         </svg>
     </a>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        const slider = document.getElementById('carrusel-proyectos');
-        let isDown = false;
-        let startX;
-        let scrollLeft;
-
-        slider.addEventListener('mousedown', (e) => {
-            isDown = true;
-            slider.classList.add('active:cursor-grabbing');
-            startX = e.pageX - slider.offsetLeft;
-            scrollLeft = slider.scrollLeft;
-        });
-        
-        slider.addEventListener('mouseleave', () => {
-            isDown = false;
-            slider.classList.remove('active:cursor-grabbing');
-        });
-        
-        slider.addEventListener('mouseup', () => {
-            isDown = false;
-            slider.classList.remove('active:cursor-grabbing');
-        });
-        
-        slider.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - slider.offsetLeft;
-            const walk = (x - startX) * 2; // Velocidad de arrastre
-            slider.scrollLeft = scrollLeft - walk;
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            loop: true,
+            coverflowEffect: {
+                rotate: 20, /* Rotación de las tarjetas laterales */
+                stretch: 0,
+                depth: 250, /* Profundidad del efecto 3D */
+                modifier: 1,
+                slideShadows: true, /* Sombras dinámicas para realismo */
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            },
         });
     </script>
 </body>
