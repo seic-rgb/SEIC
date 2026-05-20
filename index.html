@@ -50,7 +50,8 @@
         #modal-toggle-umasg:checked ~ #modal-umasg,
         #modal-toggle-umasg2:checked ~ #modal-umasg2,
         #modal-toggle-cruce:checked ~ #modal-cruce,
-        #modal-toggle-inprema:checked ~ #modal-inprema {
+        #modal-toggle-inprema:checked ~ #modal-inprema,
+        #modal-toggle-soto:checked ~ #modal-soto {
             display: flex !important;
         }
     </style>
@@ -61,6 +62,7 @@
     <input type="checkbox" id="modal-toggle-umasg2" class="hidden">
     <input type="checkbox" id="modal-toggle-cruce" class="hidden">
     <input type="checkbox" id="modal-toggle-inprema" class="hidden">
+    <input type="checkbox" id="modal-toggle-soto" class="hidden">
 
     <nav class="sticky top-0 z-40 bg-white text-slate-900 shadow-md">
         <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
@@ -202,28 +204,29 @@
             <div class="swiper mySwiper mb-12">
                 <div class="swiper-wrapper">
                     
-                    <div onclick="document.getElementById('modal-toggle-inprema').checked = true" class="swiper-slide bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border border-slate-200 cursor-pointer group hover:border-orange-300 transition duration-200">
+                    <div onclick="document.getElementById('modal-toggle-inprema').checked = true" class="swiper-slide bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border border-slate-200 cursor-pointer group hover:border-slate-400 transition duration-200">
                         <div class="overflow-hidden h-48 sm:h-56 bg-slate-200 relative">
                             <img src="proyecto-inprema-sps.jpg" alt="INJUMPEPM SPS" class="w-full h-full object-cover">
                             <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-200 text-white font-bold text-xs uppercase tracking-wider">🔍 Ver Detalles de Obra</div>
                         </div>
                         <div class="p-6 flex-grow text-left">
-                            <span class="text-[10px] font-bold text-construccion-orange uppercase tracking-wider bg-orange-50 px-2 py-0.5 rounded border border-orange-200 inline-block">⚡ Infraestructura Energética</span>
+                            <span class="text-[10px] font-bold text-slate-600 uppercase tracking-wider bg-slate-200 px-2 py-0.5 rounded border border-slate-300 inline-block">🔨 Renovación y Mantenimiento</span>
                             <h3 class="text-lg font-bold text-construccion-dark mt-2">Renovación de Techos INPREMA</h3>
                             <p class="text-xs text-slate-500 mt-1 font-medium">Ubicación: Oficina San Pedro Sula</p>
                             <p class="text-sm text-slate-600 mt-3">Sustitución de cubiertas y aislamiento. Haz clic para ver proceso de impermeabilización especializada.</p>
                         </div>
                     </div>
 
-                    <div class="swiper-slide bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border border-slate-200">
-                        <div class="overflow-hidden h-48 sm:h-56 bg-slate-200">
+                    <div onclick="document.getElementById('modal-toggle-soto').checked = true" class="swiper-slide bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border border-slate-200 cursor-pointer group hover:border-slate-400 transition duration-200">
+                        <div class="overflow-hidden h-48 sm:h-56 bg-slate-200 relative">
                             <img src="proyecto-soto-cano.jpg" alt="Soto Cano Warehouse" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-200 text-white font-bold text-xs uppercase tracking-wider">🔍 Ver Detalles de Obra</div>
                         </div>
                         <div class="p-6 flex-grow text-left">
-                            <span class="text-[10px] font-bold text-slate-600 uppercase tracking-wider bg-slate-100 px-2 py-0.5 rounded border border-slate-200 inline-block">🏭 Desarrollo Industrial</span>
+                            <span class="text-[10px] font-bold text-slate-600 uppercase tracking-wider bg-slate-200 px-2 py-0.5 rounded border border-slate-300 inline-block">🏭 Desarrollo Industrial</span>
                             <h3 class="text-lg font-bold text-construccion-dark mt-2">Installation Warehouse - Soto Cano</h3>
                             <p class="text-xs text-slate-500 mt-1 font-medium">Cliente: ETERNA S.A. de C.V.</p>
-                            <p class="text-sm text-slate-600 mt-3">Supervisión integral de la ingeniería de diseño y control constructivo de naves industriales de gran escala.</p>
+                            <p class="text-sm text-slate-600 mt-3">Supervisión integral de la ingeniería de diseño y control constructivo. Haz clic para ver fotos estructurales.</p>
                         </div>
                     </div>
 
@@ -455,7 +458,7 @@
         <div class="bg-white w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col border border-slate-100">
             <div class="bg-slate-900 text-white p-5 flex justify-between items-center border-b border-slate-800">
                 <div>
-                    <span class="text-xs text-construccion-orange uppercase tracking-widest font-bold">Ficha de Remodelación y Mantenimiento Institucional</span>
+                    <span class="text-xs text-slate-400 uppercase tracking-widest font-bold">Ficha de Renovación Institucional</span>
                     <h4 class="text-xl font-bold">Renovación Integral de Cubiertas de Techo - INPREMA</h4>
                     <p class="text-xs text-slate-400">Ubicación: Oficina Regional, San Pedro Sula, Cortés</p>
                 </div>
@@ -483,7 +486,7 @@
                             <li class="flex justify-between"><strong>Control de Temperatura:</strong> <span class="text-slate-900">Colocación de Aislante Térmico Integral</span></li>
                             <li class="flex justify-between"><strong>Drenaje Pluvial:</strong> <span class="text-slate-900">Instalación de Canales de Agua Lluvia</span></li>
                             <li class="flex justify-between"><strong>Impermeabilización Losa:</strong> <span class="text-slate-900">Aditivo IM-1 (Lazarus & Lazarus)</span></li>
-                            <li class="flex justify-between"><strong>Recubrimiento Final:</strong> <span class="text-construccion-orange font-bold">Pintado multicapa con Aqualock 8000</span></li>
+                            <li class="flex justify-between"><strong>Recubrimiento Final:</strong> <span class="text-slate-900 font-bold">Pintado multicapa con Aqualock 8000</span></li>
                         </ul>
                     </div>
                     <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
@@ -491,13 +494,64 @@
                             <span>🛡️</span> <span>Ejecución Técnica Garantizada</span>
                         </h5>
                         <p class="text-xs text-slate-600 leading-relaxed">
-                            Intervención de infraestructura física a nivel corporativo/institucional. Se garantizaron altos estándares de seguridad ocupacional durante el desmontaje y colocación de la nueva cubierta. Se utilizaron materiales de grado industrial (Aqualock, Lazarus & Lazarus) para asegurar el aislamiento térmico y la impermeabilización total del inmueble. Obra ejecutada por <strong>SEIC Honduras</strong>.
+                            Intervención de infraestructura física a nivel corporativo/institucional. Se garantizaron altos estándares de seguridad ocupacional durante el desmontaje y colocación de la nueva cubierta. Se utilizaron materiales de grado industrial (Aqualock, Lazarus & Lazarus) para asegurar el aislamiento térmico y la impermeabilización total del inmueble. Obra operada y construida por <strong>SEIC Honduras</strong>.
                         </p>
                     </div>
                 </div>
             </div>
             <div class="bg-slate-50 p-4 border-t border-slate-200 text-center">
                 <label for="modal-toggle-inprema" class="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider px-6 py-2.5 rounded-lg cursor-pointer transition inline-block">Cerrar Ficha de Proyecto</label>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-soto" class="fixed inset-0 z-50 bg-black/80 hidden items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col border border-slate-100">
+            <div class="bg-slate-900 text-white p-5 flex justify-between items-center border-b border-slate-800">
+                <div>
+                    <span class="text-xs text-slate-400 uppercase tracking-widest font-bold">Ficha de Supervisión Estructural e Industrial</span>
+                    <h4 class="text-xl font-bold">Installation Warehouse - Soto Cano Air Base</h4>
+                    <p class="text-xs text-slate-400">Ubicación: Base Aérea Soto Cano, Honduras</p>
+                </div>
+                <label for="modal-toggle-soto" class="text-slate-400 hover:text-white cursor-pointer bg-slate-800 hover:bg-slate-700 p-2.5 rounded-full text-sm font-bold transition">✕</label>
+            </div>
+            <div class="p-6 space-y-6 overflow-y-auto">
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="rounded-xl overflow-hidden shadow-md border border-slate-200 h-40 bg-slate-100">
+                        <img src="soto-cano-bloque.jpg" alt="Muros CMU y Andamiaje" class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-md border border-slate-200 h-40 bg-slate-100">
+                        <img src="soto-cano-grua.jpg" alt="Izaje de Cerchas Metálicas" class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-md border border-slate-200 h-40 bg-slate-100">
+                        <img src="soto-cano-techo.jpg" alt="Estructura de Techo TR1" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
+                        <h5 class="text-sm font-bold text-construccion-dark uppercase tracking-wider border-b border-slate-200 pb-2 flex items-center space-x-2">
+                            <span>📋</span> <span>Especificaciones de la Intervención</span>
+                        </h5>
+                        <ul class="space-y-2 text-xs text-slate-700">
+                            <li class="flex justify-between"><strong>Tipo de Estructura:</strong> <span class="text-slate-900 font-medium">Nave Industrial de 23 x 15 Metros</span></li>
+                            <li class="flex justify-between"><strong>Paredes Perimetrales:</strong> <span class="text-slate-900">Bloque Estructural (CMU) de 200mm</span></li>
+                            <li class="flex justify-between"><strong>Estructura de Techo:</strong> <span class="text-slate-900">Cerchas (Truss TR1) de 23m de Luz</span></li>
+                            <li class="flex justify-between"><strong>Cubierta Instalada:</strong> <span class="text-slate-900">Standing Seam Roof con Aislante R25</span></li>
+                            <li class="flex justify-between"><strong>Cimentación:</strong> <span class="text-slate-900 font-bold">Zapatas Aisladas y Zapatas Corridas</span></li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
+                        <h5 class="text-sm font-bold text-construccion-dark uppercase tracking-wider border-b border-slate-200 pb-2 flex items-center space-x-2">
+                            <span>🛡️</span> <span>Control Técnico e Institucional</span>
+                        </h5>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Proyecto de diseño y construcción desarrollado bajo estándares internacionales para el US Army Corps of Engineers (USACE). <strong>SEIC Honduras</strong> ejecutó de manera exclusiva la <strong>supervisión técnica de campo</strong>, verificando calidad de materiales, armado de bloques y el complejo montaje de la armadura del techo. Trabajo subcontratado y respaldado por <strong>Eterna S.A. de C.V.</strong>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-slate-50 p-4 border-t border-slate-200 text-center">
+                <label for="modal-toggle-soto" class="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider px-6 py-2.5 rounded-lg cursor-pointer transition inline-block">Cerrar Ficha de Proyecto</label>
             </div>
         </div>
     </div>
