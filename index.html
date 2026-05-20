@@ -49,7 +49,8 @@
         /* LÓGICA DE MODALS CSS PURO */
         #modal-toggle-umasg:checked ~ #modal-umasg,
         #modal-toggle-umasg2:checked ~ #modal-umasg2,
-        #modal-toggle-cruce:checked ~ #modal-cruce {
+        #modal-toggle-cruce:checked ~ #modal-cruce,
+        #modal-toggle-inprema:checked ~ #modal-inprema {
             display: flex !important;
         }
     </style>
@@ -59,6 +60,7 @@
     <input type="checkbox" id="modal-toggle-umasg" class="hidden">
     <input type="checkbox" id="modal-toggle-umasg2" class="hidden">
     <input type="checkbox" id="modal-toggle-cruce" class="hidden">
+    <input type="checkbox" id="modal-toggle-inprema" class="hidden">
 
     <nav class="sticky top-0 z-40 bg-white text-slate-900 shadow-md">
         <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
@@ -200,15 +202,16 @@
             <div class="swiper mySwiper mb-12">
                 <div class="swiper-wrapper">
                     
-                    <div class="swiper-slide bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border border-slate-200">
-                        <div class="overflow-hidden h-48 sm:h-56 bg-slate-200">
+                    <div onclick="document.getElementById('modal-toggle-inprema').checked = true" class="swiper-slide bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border border-slate-200 cursor-pointer group hover:border-orange-300 transition duration-200">
+                        <div class="overflow-hidden h-48 sm:h-56 bg-slate-200 relative">
                             <img src="proyecto-inprema-sps.jpg" alt="INJUMPEPM SPS" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-200 text-white font-bold text-xs uppercase tracking-wider">🔍 Ver Detalles de Obra</div>
                         </div>
                         <div class="p-6 flex-grow text-left">
                             <span class="text-[10px] font-bold text-construccion-orange uppercase tracking-wider bg-orange-50 px-2 py-0.5 rounded border border-orange-200 inline-block">⚡ Infraestructura Energética</span>
                             <h3 class="text-lg font-bold text-construccion-dark mt-2">Renovación de Techos INPREMA</h3>
                             <p class="text-xs text-slate-500 mt-1 font-medium">Ubicación: Oficina San Pedro Sula</p>
-                            <p class="text-sm text-slate-600 mt-3">Obras de desmontaje, acondicionamiento y sustitución de cubiertas de techo con altos estándares de seguridad ocupacional.</p>
+                            <p class="text-sm text-slate-600 mt-3">Sustitución de cubiertas y aislamiento. Haz clic para ver proceso de impermeabilización especializada.</p>
                         </div>
                     </div>
 
@@ -269,7 +272,7 @@
                         </div>
                         <div class="p-6 flex-grow text-left">
                             <span class="text-[10px] font-bold text-construccion-orange uppercase tracking-wider bg-orange-50 px-2 py-0.5 rounded border border-orange-200 inline-block">⚡ Comercial Energético</span>
-                            <h3 class="text-lg font-bold text-construccion-dark mt-2">Parqueo con Paneles Solares</h3>
+                            <h3 class="text-lg font-bold text-construccion-dark mt-1">Parqueo con Paneles Solares</h3>
                             <p class="text-xs text-slate-500 mt-1 font-medium">Cliente: SOLARIS</p>
                             <p class="text-sm text-slate-600 mt-3">Diseño estructural y ejecución de vaciado de concreto para las bases y soportes de la planta de energía solar comercial.</p>
                         </div>
@@ -335,7 +338,7 @@
                             <span>🛡️</span> <span>Control Técnico e Institucional</span>
                         </h5>
                         <p class="text-xs text-slate-600 leading-relaxed">
-                            Diseño conceptual y estructural desarrollado en estricto cumplimiento técnico para el concurso especializado de apoyo a la <strong>Unidad Municipal de Agua y Saneamiento de Gracias (UMASG)</strong> y financiamiento WASH de <strong>World Vision Honduras</strong>. Toda la ejecución estructural e ingeniería de detalle está garantizada y operada exclusivamente por el equipo técnico de <strong>SEIC Honduras</strong>.
+                            Diseño conceptual y estructural desarrollado en estricto cumplimiento técnico para el concurso especializado de apoyo a la <strong>Unidad Municipal de Agua y Saneamiento de Gracias (UMASG)</strong> y financiamiento WASH de <strong>World Vision Honduras</strong>. Toda la ejecución estructural e ingeniería de detalle está construida y operada exclusivamente por <strong>SEIC Honduras</strong>.
                         </p>
                     </div>
                 </div>
@@ -386,7 +389,7 @@
                             <span>🛡️</span> <span>Control Técnico e Institucional</span>
                         </h5>
                         <p class="text-xs text-slate-600 leading-relaxed">
-                            Ejecución estructural de alto volumen para almacenamiento WASH, proyectado para la <strong>UMASG</strong> y financiado por <strong>World Vision Honduras</strong>. Aplicación rigurosa de impermeabilización y cálculo de aceros. Toda la ejecución y dirección operativa garantizada por <strong>SEIC Honduras</strong>.
+                            Ejecución estructural de alto volumen para almacenamiento WASH, proyectado para la <strong>UMASG</strong> y financiado por <strong>World Vision Honduras</strong>. Aplicación rigurosa de impermeabilización y cálculo de aceros. Toda la ejecución y dirección operativa garantizada y construida por <strong>SEIC Honduras</strong>.
                         </p>
                     </div>
                 </div>
@@ -437,13 +440,64 @@
                             <span>🛡️</span> <span>Control Técnico e Institucional</span>
                         </h5>
                         <p class="text-xs text-slate-600 leading-relaxed">
-                            Diseño de infraestructura crítica (puente colgante para tuberías) desarrollado para la <strong>UMASG</strong> de Gracias, Lempira. Implicó cálculo de tensión de cables, cimentación profunda de torres (f'c=280 Kg/cm2) y cámaras de anclaje para asegurar la distribución de agua potable ante crecidas del río. Operado por <strong>SEIC Honduras</strong>.
+                            Diseño de infraestructura crítica (puente colgante para tuberías) desarrollado para la <strong>UMASG</strong> de Gracias, Lempira. Implicó cálculo de tensión de cables, cimentación profunda de torres (f'c=280 Kg/cm2) y cámaras de anclaje para asegurar la distribución de agua potable ante crecidas del río. Operado y construido por <strong>SEIC Honduras</strong>.
                         </p>
                     </div>
                 </div>
             </div>
             <div class="bg-slate-50 p-4 border-t border-slate-200 text-center">
                 <label for="modal-toggle-cruce" class="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider px-6 py-2.5 rounded-lg cursor-pointer transition inline-block">Cerrar Ficha de Proyecto</label>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-inprema" class="fixed inset-0 z-50 bg-black/80 hidden items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col border border-slate-100">
+            <div class="bg-slate-900 text-white p-5 flex justify-between items-center border-b border-slate-800">
+                <div>
+                    <span class="text-xs text-construccion-orange uppercase tracking-widest font-bold">Ficha de Remodelación y Mantenimiento Institucional</span>
+                    <h4 class="text-xl font-bold">Renovación Integral de Cubiertas de Techo - INPREMA</h4>
+                    <p class="text-xs text-slate-400">Ubicación: Oficina Regional, San Pedro Sula, Cortés</p>
+                </div>
+                <label for="modal-toggle-inprema" class="text-slate-400 hover:text-white cursor-pointer bg-slate-800 hover:bg-slate-700 p-2.5 rounded-full text-sm font-bold transition">✕</label>
+            </div>
+            <div class="p-6 space-y-6 overflow-y-auto">
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="rounded-xl overflow-hidden shadow-md border border-slate-200 h-40 bg-slate-100">
+                        <img src="inprema-aislante.jpg" alt="Instalación de Aislante Térmico" class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-md border border-slate-200 h-40 bg-slate-100">
+                        <img src="inprema-cubierta.jpg" alt="Instalación de Nueva Cubierta" class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-md border border-slate-200 h-40 bg-slate-100">
+                        <img src="inprema-losa.jpg" alt="Impermeabilización de Losa Blanca" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
+                        <h5 class="text-sm font-bold text-construccion-dark uppercase tracking-wider border-b border-slate-200 pb-2 flex items-center space-x-2">
+                            <span>📋</span> <span>Especificaciones de la Intervención</span>
+                        </h5>
+                        <ul class="space-y-2 text-xs text-slate-700">
+                            <li class="flex justify-between"><strong>Reemplazo de Techo:</strong> <span class="text-slate-900 font-medium">Cambio total de cubierta estructural</span></li>
+                            <li class="flex justify-between"><strong>Control de Temperatura:</strong> <span class="text-slate-900">Colocación de Aislante Térmico Integral</span></li>
+                            <li class="flex justify-between"><strong>Drenaje Pluvial:</strong> <span class="text-slate-900">Instalación de Canales de Agua Lluvia</span></li>
+                            <li class="flex justify-between"><strong>Impermeabilización Losa:</strong> <span class="text-slate-900">Aditivo IM-1 (Lazarus & Lazarus)</span></li>
+                            <li class="flex justify-between"><strong>Recubrimiento Final:</strong> <span class="text-construccion-orange font-bold">Pintado multicapa con Aqualock 8000</span></li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
+                        <h5 class="text-sm font-bold text-construccion-dark uppercase tracking-wider border-b border-slate-200 pb-2 flex items-center space-x-2">
+                            <span>🛡️</span> <span>Ejecución Técnica Garantizada</span>
+                        </h5>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Intervención de infraestructura física a nivel corporativo/institucional. Se garantizaron altos estándares de seguridad ocupacional durante el desmontaje y colocación de la nueva cubierta. Se utilizaron materiales de grado industrial (Aqualock, Lazarus & Lazarus) para asegurar el aislamiento térmico y la impermeabilización total del inmueble. Obra ejecutada por <strong>SEIC Honduras</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-slate-50 p-4 border-t border-slate-200 text-center">
+                <label for="modal-toggle-inprema" class="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider px-6 py-2.5 rounded-lg cursor-pointer transition inline-block">Cerrar Ficha de Proyecto</label>
             </div>
         </div>
     </div>
