@@ -46,9 +46,10 @@
             background-color: #f97316 !important;
         }
 
-        /* LÓGICA DE MODALS 100% CSS PURO PARA AMBOS PROYECTOS */
+        /* LÓGICA DE MODALS CSS PURO */
         #modal-toggle-umasg:checked ~ #modal-umasg,
-        #modal-toggle-umasg2:checked ~ #modal-umasg2 {
+        #modal-toggle-umasg2:checked ~ #modal-umasg2,
+        #modal-toggle-cruce:checked ~ #modal-cruce {
             display: flex !important;
         }
     </style>
@@ -57,6 +58,7 @@
 
     <input type="checkbox" id="modal-toggle-umasg" class="hidden">
     <input type="checkbox" id="modal-toggle-umasg2" class="hidden">
+    <input type="checkbox" id="modal-toggle-cruce" class="hidden">
 
     <nav class="sticky top-0 z-40 bg-white text-slate-900 shadow-md">
         <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
@@ -248,15 +250,16 @@
                         </div>
                     </div>
 
-                    <div class="swiper-slide bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border border-slate-200">
-                        <div class="overflow-hidden h-48 sm:h-56 bg-slate-200">
-                            <img src="proyecto-cruce-rio.jpg" alt="Cruce Aéreo Puente Colgante" class="w-full h-full object-cover">
+                    <div onclick="document.getElementById('modal-toggle-cruce').checked = true" class="swiper-slide bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border border-slate-200 cursor-pointer group hover:border-construccion-orange transition duration-200">
+                        <div class="overflow-hidden h-48 sm:h-56 bg-slate-200 relative">
+                            <img src="panoramica-cruce.jpg" alt="Cruce Aéreo Puente Colgante" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-200 text-white font-bold text-xs uppercase tracking-wider">🔍 Ver Detalles de Obra</div>
                         </div>
                         <div class="p-6 flex-grow text-left">
                             <span class="text-[10px] font-bold text-construccion-orange uppercase tracking-wider">💧 Infraestructura WASH</span>
-                            <h3 class="text-lg font-bold text-construccion-dark mt-1">Cruce Aéreo Puente Colgante</h3>
-                            <p class="text-xs text-slate-500 mt-1 font-medium">Para Tubería de 4"</p>
-                            <p class="text-sm text-slate-600 mt-3">Cálculo estructural e instalación de puente colgante de alta ingeniería para el paso aéreo seguro de líneas de distribución.</p>
+                            <h3 class="text-lg font-bold text-construccion-dark mt-1">Cruce Aéreo Río Arcagual</h3>
+                            <p class="text-xs text-slate-500 mt-1 font-medium">Luz: 40 Metros | Tuberías de 4" y 3"</p>
+                            <p class="text-sm text-slate-600 mt-3">Ingeniería especializada para paso aéreo tipo puente colgante. Haz clic para ver datos estructurales.</p>
                         </div>
                     </div>
 
@@ -290,6 +293,7 @@
             </div>
         </div>
     </section>
+
 
     <div id="modal-umasg" class="fixed inset-0 z-50 bg-black/80 hidden items-center justify-center p-4 backdrop-blur-sm">
         <div class="bg-white w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col border border-slate-100">
@@ -392,6 +396,58 @@
             </div>
         </div>
     </div>
+
+    <div id="modal-cruce" class="fixed inset-0 z-50 bg-black/80 hidden items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col border border-slate-100">
+            <div class="bg-slate-900 text-white p-5 flex justify-between items-center border-b border-slate-800">
+                <div>
+                    <span class="text-xs text-blue-400 uppercase tracking-widest font-bold">Ficha de Ingeniería Estructural Avanzada</span>
+                    <h4 class="text-xl font-bold">Cruce Aéreo de Tuberías - Río Arcagual</h4>
+                    <p class="text-xs text-slate-400">Ubicación: Gracias, Departamento de Lempira, Honduras</p>
+                </div>
+                <label for="modal-toggle-cruce" class="text-slate-400 hover:text-white cursor-pointer bg-slate-800 hover:bg-slate-700 p-2.5 rounded-full text-sm font-bold transition">✕</label>
+            </div>
+            <div class="p-6 space-y-6 overflow-y-auto">
+                <div class="grid md:grid-cols-3 gap-4">
+                    <div class="rounded-xl overflow-hidden shadow-md border border-slate-200 h-40 bg-slate-100">
+                        <img src="cimentacion-torre.jpg" alt="Cimentación y Acero de Torre" class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-md border border-slate-200 h-40 bg-slate-100">
+                        <img src="anclaje-cruce.jpg" alt="Sistema de Anclaje de Cables" class="w-full h-full object-cover">
+                    </div>
+                    <div class="rounded-xl overflow-hidden shadow-md border border-slate-200 h-40 bg-slate-100">
+                        <img src="panoramica-cruce.jpg" alt="Panorámica del Río Arcagual" class="w-full h-full object-cover">
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
+                        <h5 class="text-sm font-bold text-construccion-dark uppercase tracking-wider border-b border-slate-200 pb-2 flex items-center space-x-2">
+                            <span>📊</span> <span>Especificaciones de Diseño Final</span>
+                        </h5>
+                        <ul class="space-y-2 text-xs text-slate-700">
+                            <li class="flex justify-between"><strong>Luz del Cruce (Span):</strong> <span class="text-blue-700 font-bold">40.00 Metros</span></li>
+                            <li class="flex justify-between"><strong>Altura de Torres:</strong> <span class="text-slate-900 font-medium">4.50 Metros</span></li>
+                            <li class="flex justify-between"><strong>Cables Principales:</strong> <span class="text-slate-900">Tipo BOA de 1 Pulgada</span></li>
+                            <li class="flex justify-between"><strong>Cables de Péndolas:</strong> <span class="text-slate-900">Tipo BOA de 3/8"</span></li>
+                            <li class="flex justify-between"><strong>Tuberías Soportadas:</strong> <span class="text-slate-900">Hierro Galvanizado (HG) de 4" y 3"</span></li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
+                        <h5 class="text-sm font-bold text-construccion-dark uppercase tracking-wider border-b border-slate-200 pb-2 flex items-center space-x-2">
+                            <span>🛡️</span> <span>Control Técnico e Institucional</span>
+                        </h5>
+                        <p class="text-xs text-slate-600 leading-relaxed">
+                            Diseño de infraestructura crítica (puente colgante para tuberías) desarrollado para la <strong>UMASG</strong> de Gracias, Lempira. Implicó cálculo de tensión de cables, cimentación profunda de torres (f'c=280 Kg/cm2) y cámaras de anclaje para asegurar la distribución de agua potable ante crecidas del río. Operado por <strong>SEIC Honduras</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-slate-50 p-4 border-t border-slate-200 text-center">
+                <label for="modal-toggle-cruce" class="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider px-6 py-2.5 rounded-lg cursor-pointer transition inline-block">Cerrar Ficha de Proyecto</label>
+            </div>
+        </div>
+    </div>
+
 
     <section id="contacto" class="py-20 bg-slate-900 text-white">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
@@ -506,4 +562,4 @@
         });
     </script>
 </body>
-</html
+</html>
