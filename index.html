@@ -7,56 +7,8 @@
     
     <link rel="icon" type="image/png" href="favicon.png">
 
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        construccion: {
-                            dark: '#0a192f',
-                            accent: '#1e40af',
-                            orange: '#f97316'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
-    <style>
-        .swiper {
-            width: 100%;
-            padding-top: 30px;
-            padding-bottom: 50px;
-        }
-        .swiper-slide {
-            background-position: center;
-            background-size: cover;
-            width: 320px;
-        }
-        @media (min-width: 768px) {
-            .swiper-slide {
-                width: 400px;
-            }
-        }
-        .swiper-pagination-bullet-active {
-            background-color: #f97316 !important;
-        }
-
-        /* LÓGICA DE MODALS CSS PURO */
-        #modal-toggle-umasg:checked ~ #modal-umasg,
-        #modal-toggle-umasg2:checked ~ #modal-umasg2,
-        #modal-toggle-cruce:checked ~ #modal-cruce,
-        #modal-toggle-inprema:checked ~ #modal-inprema,
-        #modal-toggle-soto:checked ~ #modal-soto,
-        #modal-toggle-diprova:checked ~ #modal-diprova,
-        #modal-toggle-incohm:checked ~ #modal-incohm {
-            display: flex !important;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans relative overflow-x-hidden">
 
