@@ -51,7 +51,8 @@
         #modal-toggle-umasg2:checked ~ #modal-umasg2,
         #modal-toggle-cruce:checked ~ #modal-cruce,
         #modal-toggle-inprema:checked ~ #modal-inprema,
-        #modal-toggle-soto:checked ~ #modal-soto {
+        #modal-toggle-soto:checked ~ #modal-soto,
+        #modal-toggle-diprova:checked ~ #modal-diprova {
             display: flex !important;
         }
     </style>
@@ -63,6 +64,7 @@
     <input type="checkbox" id="modal-toggle-cruce" class="hidden">
     <input type="checkbox" id="modal-toggle-inprema" class="hidden">
     <input type="checkbox" id="modal-toggle-soto" class="hidden">
+    <input type="checkbox" id="modal-toggle-diprova" class="hidden">
 
     <nav class="sticky top-0 z-40 bg-white text-slate-900 shadow-md">
         <div class="max-w-7xl mx-auto px-6 py-3 flex justify-between items-center">
@@ -223,7 +225,7 @@
                             <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-200 text-white font-bold text-xs uppercase tracking-wider">🔍 Ver Detalles de Obra</div>
                         </div>
                         <div class="p-6 flex-grow text-left">
-                            <span class="text-[10px] font-bold text-slate-600 uppercase tracking-wider bg-slate-200 px-2 py-0.5 rounded border border-slate-300 inline-block">🏭 Desarrollo Industrial</span>
+                            <span class="text-[10px] font-bold text-slate-600 uppercase tracking-wider bg-slate-100 px-2 py-0.5 rounded border border-slate-200 inline-block">🏭 Desarrollo Industrial</span>
                             <h3 class="text-lg font-bold text-construccion-dark mt-2">Installation Warehouse - Soto Cano</h3>
                             <p class="text-xs text-slate-500 mt-1 font-medium">Cliente: ETERNA S.A. de C.V.</p>
                             <p class="text-sm text-slate-600 mt-3">Supervisión integral de la ingeniería de diseño y control constructivo. Haz clic para ver fotos estructurales.</p>
@@ -269,15 +271,16 @@
                         </div>
                     </div>
 
-                    <div class="swiper-slide bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border border-slate-200">
-                        <div class="overflow-hidden h-48 sm:h-56 bg-slate-200">
+                    <div onclick="document.getElementById('modal-toggle-diprova').checked = true" class="swiper-slide bg-white rounded-xl shadow-lg overflow-hidden flex flex-col border border-slate-200 cursor-pointer group hover:border-orange-300 transition duration-200">
+                        <div class="overflow-hidden h-48 sm:h-56 bg-slate-200 relative">
                             <img src="proyecto-solaris-diprova.jpg" alt="Planta Solar Diprova" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-200 text-white font-bold text-xs uppercase tracking-wider">🔍 Ver Detalles de Obra</div>
                         </div>
                         <div class="p-6 flex-grow text-left">
                             <span class="text-[10px] font-bold text-construccion-orange uppercase tracking-wider bg-orange-50 px-2 py-0.5 rounded border border-orange-200 inline-block">⚡ Comercial Energético</span>
                             <h3 class="text-lg font-bold text-construccion-dark mt-1">Parqueo con Paneles Solares</h3>
-                            <p class="text-xs text-slate-500 mt-1 font-medium">Cliente: SOLARIS</p>
-                            <p class="text-sm text-slate-600 mt-3">Diseño estructural y ejecución de vaciado de concreto para las bases y soportes de la planta de energía solar comercial.</p>
+                            <p class="text-xs text-slate-500 mt-1 font-medium">Cliente: SOLARIS / DIPROVA</p>
+                            <p class="text-sm text-slate-600 mt-3">Diseño de cimentación y control de calidad. Haz clic para ver detalles de fundición y ensayo de cilindros.</p>
                         </div>
                     </div>
 
@@ -387,287 +390,3 @@
                             <li class="flex justify-between"><strong>Acceso y Tapadera:</strong> <span class="text-slate-900">Escalera HG 1 1/2" y Tapadera 0.60m</span></li>
                         </ul>
                     </div>
-                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
-                        <h5 class="text-sm font-bold text-construccion-dark uppercase tracking-wider border-b border-slate-200 pb-2 flex items-center space-x-2">
-                            <span>🛡️</span> <span>Control Técnico e Institucional</span>
-                        </h5>
-                        <p class="text-xs text-slate-600 leading-relaxed">
-                            Ejecución estructural de alto volumen para almacenamiento WASH, proyectado para la <strong>UMASG</strong> y financiado por <strong>World Vision Honduras</strong>. Aplicación rigurosa de impermeabilización y cálculo de aceros. Toda la ejecución y dirección operativa garantizada y construida por <strong>SEIC Honduras</strong>.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-slate-50 p-4 border-t border-slate-200 text-center">
-                <label for="modal-toggle-umasg2" class="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider px-6 py-2.5 rounded-lg cursor-pointer transition inline-block">Cerrar Ficha de Proyecto</label>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-cruce" class="fixed inset-0 z-50 bg-black/80 hidden items-center justify-center p-4 backdrop-blur-sm">
-        <div class="bg-white w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col border border-slate-100">
-            <div class="bg-slate-900 text-white p-5 flex justify-between items-center border-b border-slate-800">
-                <div>
-                    <span class="text-xs text-blue-400 uppercase tracking-widest font-bold">Ficha de Ingeniería Estructural Avanzada</span>
-                    <h4 class="text-xl font-bold">Cruce Aéreo de Tuberías - Río Arcagual</h4>
-                    <p class="text-xs text-slate-400">Ubicación: Gracias, Departamento de Lempira, Honduras</p>
-                </div>
-                <label for="modal-toggle-cruce" class="text-slate-400 hover:text-white cursor-pointer bg-slate-800 hover:bg-slate-700 p-2.5 rounded-full text-sm font-bold transition">✕</label>
-            </div>
-            <div class="p-6 space-y-6 overflow-y-auto">
-                <div class="grid md:grid-cols-3 gap-4">
-                    <div class="rounded-xl overflow-hidden shadow-md border border-slate-200 h-40 bg-slate-100">
-                        <img src="cimentacion-torre.jpg" alt="Cimentación y Acero de Torre" class="w-full h-full object-cover">
-                    </div>
-                    <div class="rounded-xl overflow-hidden shadow-md border border-slate-200 h-40 bg-slate-100">
-                        <img src="anclaje-cruce.jpg" alt="Sistema de Anclaje de Cables" class="w-full h-full object-cover">
-                    </div>
-                    <div class="rounded-xl overflow-hidden shadow-md border border-slate-200 h-40 bg-slate-100">
-                        <img src="panoramica-cruce.jpg" alt="Panorámica del Río Arcagual" class="w-full h-full object-cover">
-                    </div>
-                </div>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
-                        <h5 class="text-sm font-bold text-construccion-dark uppercase tracking-wider border-b border-slate-200 pb-2 flex items-center space-x-2">
-                            <span>📊</span> <span>Especificaciones de Diseño Final</span>
-                        </h5>
-                        <ul class="space-y-2 text-xs text-slate-700">
-                            <li class="flex justify-between"><strong>Luz del Cruce (Span):</strong> <span class="text-blue-700 font-bold">40.00 Metros</span></li>
-                            <li class="flex justify-between"><strong>Altura de Torres:</strong> <span class="text-slate-900 font-medium">4.50 Metros</span></li>
-                            <li class="flex justify-between"><strong>Cables Principales:</strong> <span class="text-slate-900">Tipo BOA de 1 Pulgada</span></li>
-                            <li class="flex justify-between"><strong>Cables de Péndolas:</strong> <span class="text-slate-900">Tipo BOA de 3/8"</span></li>
-                            <li class="flex justify-between"><strong>Tuberías Soportadas:</strong> <span class="text-slate-900">Hierro Galvanizado (HG) de 4" y 3"</span></li>
-                        </ul>
-                    </div>
-                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
-                        <h5 class="text-sm font-bold text-construccion-dark uppercase tracking-wider border-b border-slate-200 pb-2 flex items-center space-x-2">
-                            <span>🛡️</span> <span>Control Técnico e Institucional</span>
-                        </h5>
-                        <p class="text-xs text-slate-600 leading-relaxed">
-                            Diseño de infraestructura crítica (puente colgante para tuberías) desarrollado para la <strong>UMASG</strong> de Gracias, Lempira. Implicó cálculo de tensión de cables, cimentación profunda de torres (f'c=280 Kg/cm2) y cámaras de anclaje para asegurar la distribución de agua potable ante crecidas del río. Operado y construido por <strong>SEIC Honduras</strong>.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-slate-50 p-4 border-t border-slate-200 text-center">
-                <label for="modal-toggle-cruce" class="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider px-6 py-2.5 rounded-lg cursor-pointer transition inline-block">Cerrar Ficha de Proyecto</label>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-inprema" class="fixed inset-0 z-50 bg-black/80 hidden items-center justify-center p-4 backdrop-blur-sm">
-        <div class="bg-white w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col border border-slate-100">
-            <div class="bg-slate-900 text-white p-5 flex justify-between items-center border-b border-slate-800">
-                <div>
-                    <span class="text-xs text-slate-400 uppercase tracking-widest font-bold">Ficha de Renovación Institucional</span>
-                    <h4 class="text-xl font-bold">Renovación Integral de Cubiertas de Techo - INPREMA</h4>
-                    <p class="text-xs text-slate-400">Ubicación: Oficina Regional, San Pedro Sula, Cortés</p>
-                </div>
-                <label for="modal-toggle-inprema" class="text-slate-400 hover:text-white cursor-pointer bg-slate-800 hover:bg-slate-700 p-2.5 rounded-full text-sm font-bold transition">✕</label>
-            </div>
-            <div class="p-6 space-y-6 overflow-y-auto">
-                <div class="grid md:grid-cols-3 gap-4">
-                    <div class="rounded-xl overflow-hidden shadow-md border border-slate-200 h-40 bg-slate-100">
-                        <img src="inprema-aislante.jpg" alt="Instalación de Aislante Térmico" class="w-full h-full object-cover">
-                    </div>
-                    <div class="rounded-xl overflow-hidden shadow-md border border-slate-200 h-40 bg-slate-100">
-                        <img src="inprema-cubierta.jpg" alt="Instalación de Nueva Cubierta" class="w-full h-full object-cover">
-                    </div>
-                    <div class="rounded-xl overflow-hidden shadow-md border border-slate-200 h-40 bg-slate-100">
-                        <img src="inprema-losa.jpg" alt="Impermeabilización de Losa Blanca" class="w-full h-full object-cover">
-                    </div>
-                </div>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
-                        <h5 class="text-sm font-bold text-construccion-dark uppercase tracking-wider border-b border-slate-200 pb-2 flex items-center space-x-2">
-                            <span>📋</span> <span>Especificaciones de la Intervención</span>
-                        </h5>
-                        <ul class="space-y-2 text-xs text-slate-700">
-                            <li class="flex justify-between"><strong>Reemplazo de Techo:</strong> <span class="text-slate-900 font-medium">Cambio total de cubierta estructural</span></li>
-                            <li class="flex justify-between"><strong>Control de Temperatura:</strong> <span class="text-slate-900">Colocación de Aislante Térmico Integral</span></li>
-                            <li class="flex justify-between"><strong>Drenaje Pluvial:</strong> <span class="text-slate-900">Instalación de Canales de Agua Lluvia</span></li>
-                            <li class="flex justify-between"><strong>Impermeabilización Losa:</strong> <span class="text-slate-900">Aditivo IM-1 (Lazarus & Lazarus)</span></li>
-                            <li class="flex justify-between"><strong>Recubrimiento Final:</strong> <span class="text-slate-900 font-bold">Pintado multicapa con Aqualock 8000</span></li>
-                        </ul>
-                    </div>
-                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
-                        <h5 class="text-sm font-bold text-construccion-dark uppercase tracking-wider border-b border-slate-200 pb-2 flex items-center space-x-2">
-                            <span>🛡️</span> <span>Ejecución Técnica Garantizada</span>
-                        </h5>
-                        <p class="text-xs text-slate-600 leading-relaxed">
-                            Intervención de infraestructura física a nivel corporativo/institucional. Se garantizaron altos estándares de seguridad ocupacional durante el desmontaje y colocación de la nueva cubierta. Se utilizaron materiales de grado industrial (Aqualock, Lazarus & Lazarus) para asegurar el aislamiento térmico y la impermeabilización total del inmueble. Obra operada y construida por <strong>SEIC Honduras</strong>.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-slate-50 p-4 border-t border-slate-200 text-center">
-                <label for="modal-toggle-inprema" class="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider px-6 py-2.5 rounded-lg cursor-pointer transition inline-block">Cerrar Ficha de Proyecto</label>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal-soto" class="fixed inset-0 z-50 bg-black/80 hidden items-center justify-center p-4 backdrop-blur-sm">
-        <div class="bg-white w-full max-w-4xl rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col border border-slate-100">
-            <div class="bg-slate-900 text-white p-5 flex justify-between items-center border-b border-slate-800">
-                <div>
-                    <span class="text-xs text-slate-400 uppercase tracking-widest font-bold">Ficha de Supervisión Estructural e Industrial</span>
-                    <h4 class="text-xl font-bold">Installation Warehouse - Soto Cano Air Base</h4>
-                    <p class="text-xs text-slate-400">Ubicación: Base Aérea Soto Cano, Honduras</p>
-                </div>
-                <label for="modal-toggle-soto" class="text-slate-400 hover:text-white cursor-pointer bg-slate-800 hover:bg-slate-700 p-2.5 rounded-full text-sm font-bold transition">✕</label>
-            </div>
-            <div class="p-6 space-y-6 overflow-y-auto">
-                <div class="grid md:grid-cols-3 gap-4">
-                    <div class="rounded-xl overflow-hidden shadow-md border border-slate-200 h-40 bg-slate-100">
-                        <img src="soto-cano-bloque.jpg" alt="Muros CMU y Andamiaje" class="w-full h-full object-cover">
-                    </div>
-                    <div class="rounded-xl overflow-hidden shadow-md border border-slate-200 h-40 bg-slate-100">
-                        <img src="soto-cano-grua.jpg" alt="Izaje de Cerchas Metálicas" class="w-full h-full object-cover">
-                    </div>
-                    <div class="rounded-xl overflow-hidden shadow-md border border-slate-200 h-40 bg-slate-100">
-                        <img src="soto-cano-techo.jpg" alt="Estructura de Techo TR1" class="w-full h-full object-cover">
-                    </div>
-                </div>
-                <div class="grid md:grid-cols-2 gap-6">
-                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
-                        <h5 class="text-sm font-bold text-construccion-dark uppercase tracking-wider border-b border-slate-200 pb-2 flex items-center space-x-2">
-                            <span>📋</span> <span>Especificaciones de la Intervención</span>
-                        </h5>
-                        <ul class="space-y-2 text-xs text-slate-700">
-                            <li class="flex justify-between"><strong>Tipo de Estructura:</strong> <span class="text-slate-900 font-medium">Nave Industrial de 23 x 15 Metros</span></li>
-                            <li class="flex justify-between"><strong>Paredes Perimetrales:</strong> <span class="text-slate-900">Bloque Estructural (CMU) de 200mm</span></li>
-                            <li class="flex justify-between"><strong>Estructura de Techo:</strong> <span class="text-slate-900">Cerchas (Truss TR1) de 23m de Luz</span></li>
-                            <li class="flex justify-between"><strong>Cubierta Instalada:</strong> <span class="text-slate-900">Standing Seam Roof con Aislante R25</span></li>
-                            <li class="flex justify-between"><strong>Cimentación:</strong> <span class="text-slate-900 font-bold">Zapatas Aisladas y Zapatas Corridas</span></li>
-                        </ul>
-                    </div>
-                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-5 space-y-3">
-                        <h5 class="text-sm font-bold text-construccion-dark uppercase tracking-wider border-b border-slate-200 pb-2 flex items-center space-x-2">
-                            <span>🛡️</span> <span>Control Técnico e Institucional</span>
-                        </h5>
-                        <p class="text-xs text-slate-600 leading-relaxed">
-                            Proyecto de diseño y construcción desarrollado bajo estándares internacionales para el US Army Corps of Engineers (USACE). <strong>SEIC Honduras</strong> ejecutó de manera exclusiva la <strong>supervisión técnica de campo</strong>, verificando calidad de materiales, armado de bloques y el complejo montaje de la armadura del techo. Trabajo subcontratado y respaldado por <strong>Eterna S.A. de C.V.</strong>
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-slate-50 p-4 border-t border-slate-200 text-center">
-                <label for="modal-toggle-soto" class="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs uppercase tracking-wider px-6 py-2.5 rounded-lg cursor-pointer transition inline-block">Cerrar Ficha de Proyecto</label>
-            </div>
-        </div>
-    </div>
-
-
-    <section id="contacto" class="py-20 bg-slate-900 text-white">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-start">
-            
-            <div>
-                <span class="text-xs font-bold text-blue-400 uppercase tracking-widest block mb-2">¿Listo para tu próximo proyecto?</span>
-                <h2 class="text-3xl font-bold text-white mb-4">Déjalo en manos de expertos</h2>
-                <p class="text-slate-400 mb-6">Contáctenos hoy mismo y descubra cómo nuestra ingeniería de innovación puede hacer realidad tu obra con total transparencia y legalidad.</p>
-                
-                <div class="mb-6 bg-slate-800 border border-slate-700/60 rounded-xl p-4 space-y-2.5 text-sm">
-                    <div class="flex items-center space-x-3">
-                        <span class="text-lg">📞</span>
-                        <p class="text-slate-300 font-medium">WhatsApp Corporativo: <a href="https://wa.me/50433928987" target="_blank" class="text-blue-400 hover:underline font-bold ml-1">+504 3392-8987</a></p>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <span class="text-lg">✉️</span>
-                        <p class="text-slate-300 font-medium">Correo Institucional: <a href="mailto:seic@seic-hn.com" class="text-blue-400 hover:underline font-bold ml-1">seic@seic-hn.com</a></p>
-                    </div>
-                    <div class="flex items-center space-x-3">
-                        <span class="text-lg">📍</span>
-                        <p class="text-slate-300 font-medium">Ubicación Central: Aldea el Birichiche, Siguatepeque, Comayagua</p>
-                    </div>
-                </div>
-                
-                <form class="space-y-4 text-slate-900" action="https://formspree.io/f/mnqeolzd" method="POST">
-                    <input type="text" name="nombre" placeholder="Nombre Completo o Empresa" class="w-full px-4 py-3 rounded bg-white focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                    <input type="email" name="correo" placeholder="Correo Electrónico Institucional" class="w-full px-4 py-3 rounded bg-white focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-                    <textarea name="mensaje" placeholder="Describa su solicitud de cotización, licitación o requerimiento técnico..." rows="4" class="w-full px-4 py-3 rounded bg-white focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
-                    
-                    <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3 pt-2">
-                        <button type="submit" class="w-full sm:w-2/3 bg-construccion-orange text-white font-bold py-3.5 rounded hover:bg-orange-600 transition tracking-wide uppercase text-sm">Solicitar una Cotización</button>
-                        <a href="perfil-corporativo-seic.pdf" target="_blank" class="w-full sm:w-1/3 border border-slate-700 bg-slate-800 text-slate-300 font-bold py-3.5 rounded hover:bg-slate-700 transition tracking-wide uppercase text-xs flex items-center justify-center space-x-2">
-                            <span>📄</span> <span>Descargar Perfil</span>
-                        </a>
-                    </div>
-                </form>
-            </div>
-            
-            <div class="flex flex-col space-y-6">
-                <div class="bg-slate-800 p-5 rounded-xl border border-slate-700 space-y-3">
-                    <div>
-                        <h3 class="text-xl font-bold text-blue-400 mb-0.5">Oficina Central SEIC</h3>
-                        <p class="text-slate-400 text-xs">Aldea el Birichiche, Siguatepeque, Comayagua — Cobertura a Nivel Nacional</p>
-                    </div>
-                    <div class="rounded-lg overflow-hidden h-64 border border-slate-700 bg-slate-950">
-                        <iframe 
-                            src="https://maps.google.com/maps?q=14.617892,-87.865475&hl=es&z=16&output=embed" 
-                            class="w-full h-full border-0" 
-                            allowfullscreen="" 
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
-                </div>
-
-                <div class="bg-slate-800/50 border border-slate-700/60 rounded-xl p-5 grid grid-cols-2 gap-4 text-xs">
-                    <div class="space-y-1 border-r border-slate-700/60 pr-2">
-                        <h4 class="text-blue-400 font-bold uppercase tracking-wider flex items-center space-x-1">
-                            <span>🏢</span> <span>Atención en Oficina</span>
-                        </h4>
-                        <p class="text-slate-300 font-bold">Lunes a Viernes</p>
-                        <p class="text-slate-300">08:00 AM - 05:00 PM</p>
-                        <p class="text-slate-400 text-[11px] leading-relaxed">Gestión administrativa, reuniones institucionales y atención de llamadas.</p>
-                    </div>
-                    <div class="space-y-1 pl-2">
-                        <h4 class="text-construccion-orange font-bold uppercase tracking-wider flex items-center space-x-1">
-                            <span>🚧</span> <span>Horarios de Campo</span>
-                        </h4>
-                        <p class="text-slate-300 font-bold">Lunes a Sábado</p>
-                        <p class="text-slate-300">Seguimiento de Obra</p>
-                        <p class="text-slate-400 text-[11px] leading-relaxed">Operaciones activas en frentes de trabajo y supervisión técnica en terreno.</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <footer class="bg-black text-slate-500 py-6 text-center text-xs border-t border-slate-900 px-4 pb-12 md:pb-6">
-        <p>© 2026 SEIC (Servicios Especializados en Ingeniería Civil S de R.L. de C.V.). Todos los derechos reservados.</p>
-    </footer>
-
-    <a href="https://wa.me/50433928987?text=Hola,%20me%20gustaría%20solicitar%20información%20sobre%20los%20servicios%20de%20SEIC." target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-green-600 hover:scale-110 transition-all duration-300 z-50 flex items-center justify-center">
-        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-        </svg>
-    </a>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            effect: "coverflow",
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: "auto",
-            loop: true,
-            coverflowEffect: {
-                rotate: 20,
-                stretch: 0,
-                depth: 250,
-                modifier: 1,
-                slideShadows: true,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            autoplay: {
-                delay: 3500,
-                disableOnInteraction: false,
-            },
-        });
-    </script>
-</body>
-</html>
