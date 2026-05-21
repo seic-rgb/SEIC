@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .swiper {
+        width: 100%;
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 320px;
+    }
+    @media (min-width: 768px) {
+        .swiper-slide {
+            width: 400px;
+        }
+    }
+    .swiper-pagination-bullet-active {
+        background-color: #f97316 !important;
+    }
+
+    /* LÓGICA DE MODALS CSS PURO */
+    #modal-toggle-umasg:checked ~ #modal-umasg,
+    #modal-toggle-umasg2:checked ~ #modal-umasg2,
+    #modal-toggle-cruce:checked ~ #modal-cruce,
+    #modal-toggle-inprema:checked ~ #modal-inprema,
+    #modal-toggle-soto:checked ~ #modal-soto,
+    #modal-toggle-diprova:checked ~ #modal-diprova,
+    #modal-toggle-incohm:checked ~ #modal-incohm {
+        display: flex !important;
+    }
+}
